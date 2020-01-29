@@ -6,7 +6,9 @@ var student1 = {
 }
 
 for (var key in student1) {
-  $('.student .student1').append(student1[key] + ' ');
+  // var listItem = $('.template li').clone();
+  // listItem.append(key + ': ' + student1[key]);
+  // $('.student .list-student').append(listItem);
   console.log(key, student1[key]);
 }
 
@@ -38,9 +40,12 @@ var studentArray = [
 
 for (var i = 0; i < studentArray.length; i++) {
   for (var key in studentArray[i]) {
-    // $('.student .student' + i + 2).append(studentArray[i][key] + ' ');
+    var listItem = $('.template li').clone();
+    listItem.append(key + ': ' + studentArray[i][key]);
+    $('.student .list-student').append(listItem);
     console.log(key, studentArray[i][key]);
   }
+  $('.student .list-student').append('==========');
 }
 
 console.log('==========');
@@ -53,6 +58,9 @@ var student6 = {
 
 for (var key in student6) {
   student6[key] = prompt('Insert ' + key);
+  var listItem = $('.template li').clone();
+  listItem.append(key + ': ' + student6[key]);
+  $('.student .list-student').append(listItem);
   console.log(key, student6[key]);
 }
 // parseInt(student6['age']);
