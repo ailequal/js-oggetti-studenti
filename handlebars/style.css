@@ -9,3 +9,19 @@ body {
   font-family: sans-serif;
   font-size: 16px
 }
+
+.container {
+  max-width: 1200px;
+  width: 70%;
+  margin: auto;
+}
+
+/* main */
+h1 {
+  margin: 10px;
+  text-align: center;
+}
+
+p {
+  margin: 10px 0;
+}
