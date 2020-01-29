@@ -6,7 +6,8 @@ var student = {
 }
 
 for (var key in student) {
-console.log(key);
+  $('.student p').append(student[key] + ' ');
+  console.log(student[key]);
 }
 
 // console.log(student);
