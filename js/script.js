@@ -1,38 +1,35 @@
 $(document).ready(function() {
-  
-  var student1 = {
+
+  var studentX = {
     'name' : 'lucas',
     'surname' : 'callister',
     'age' : 21
   }
 
-  for (var key in student1) {
-    // var listItem = $('.template li').clone();
-    // listItem.append(key + ': ' + student1[key]);
-    // $('.student .list-student').append(listItem);
-    console.log(key, student1[key]);
+  for (var key in studentX) {
+    console.log(key, studentX[key]);
   }
 
   console.log('==========');
 
   var studentArray = [
-    student1,
-    student2 = {
+    studentX,
+    {
       'name' : 'rufus',
       'surname' : 'curly',
       'age' : 23
     },
-    student3 = {
+    {
       'name' : 'paolo',
       'surname' : 'rossi',
       'age' : 31
     },
-    student4 = {
+    {
       'name' : 'simon',
       'surname' : 'green',
       'age' : 25
     },
-    student5 = {
+    {
       'name' : 'marge',
       'surname' : 'silc',
       'age' : 19
@@ -40,30 +37,20 @@ $(document).ready(function() {
   ]
 
   for (var i = 0; i < studentArray.length; i++) {
-    for (var key in studentArray[i]) {
-      var listItem = $('.template li').clone();
-      listItem.append(key + ': ' + studentArray[i][key]);
-      $('.student .list-student').append(listItem);
-      console.log(key, studentArray[i][key]);
-    }
-    $('.student .list-student').append('==========');
+    var student = studentArray[i];
+    console.log(studentArray[i].name, studentArray[i].surname);
   }
 
   console.log('==========');
 
-  var student6 = {
-    'name' : '',
-    'surname' : '',
-    'age' : 0
+  var studentNew = {
+    'name' : prompt('Insert student name'),
+    'surname' : prompt('Insert student surname'),
+    'age' : parseInt(prompt('Insert student age'))
   }
 
-  for (var key in student6) {
-    student6[key] = prompt('Insert ' + key);
-    var listItem = $('.template li').clone();
-    listItem.append(key + ': ' + student6[key]);
-    $('.student .list-student').append(listItem);
-    console.log(key, student6[key]);
+  for (var key in studentNew) {
+    console.log(key, studentNew[key]);
   }
-  // parseInt(student6['age']);
 
 });

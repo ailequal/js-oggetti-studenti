@@ -10,22 +10,9 @@ body {
   font-size: 22px;
 }
 
-.container {
-  width: 250px;
-  margin: auto;
-}
-
-.template {
-  display: none;
-}
-
 /* main */
 h1 {
   margin: 10px;
   text-align: center;
   color: lightblue;
-}
-
-p {
-  margin: 10px;
 }
